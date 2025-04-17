@@ -8,15 +8,23 @@ async def on_ready():
     print(f"Бот {bot.user} успешно запущен!")
 
 @bot.command()
-async def визитка(ctx):
-    визитка_текст = """
+async def card(ctx):
+    card_text = """
     **👤 Визитка**
     - Фамилия: Канатов
     - Имя: Бауыржан
     - Возраст: 19 лет
     - Номер: 8 707 246 1531
 """
-    await ctx.send(визитка_текст)
+    await ctx.send(card_text)
+
+@bot.command()
+async def skills(ctx):
+    myskills = """
+    **Мои навыки**
+    HTML, CSS, JS, Python
+"""
+    await ctx.send(myskills)
 
 # Запуск бота
 bot.run(TOKEN)
